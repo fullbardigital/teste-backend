@@ -41,7 +41,7 @@ Criar um cadastro de alunos com os seguintes campos:
 
 ## Dados de acesso ao banco de desenvolvimento 
 
-Os dados de acesso ao banco de dados estão no email enviado com o link desse repositório.
+Os dados de acesso ao banco de dados estão no email enviado com o link desse repositório e as tabelas de aluno, período e curso já estão criadas.
 
 
 **Boa Sorte!**
