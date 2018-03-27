@@ -1,0 +1,47 @@
+﻿@model IEnumerable<FullbarDigital.Models.TbAluno>
+
+@{
+    ViewData["Title"] = "Lista de Alunos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista de Alunos</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>RA</th>
+            <th>Curso</th>
+            <th>Periodo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ra)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdCursoNavigation.Curso)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdPeriodoNavigation.Periodo)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdAluno" class="btn btn-warning">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdAluno" class="btn btn-info">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdAluno" class="btn btn-danger">Apagar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
