@@ -8,3 +8,4 @@ C:\Users\guilherme.honda\source\repos\Fullbar\FullbarDigital\FullbarDigital\obj\
 C:\Users\guilherme.honda\source\repos\Fullbar\FullbarDigital\FullbarDigital\obj\Debug\netcoreapp2.0\FullbarDigital.AssemblyInfo.cs
 C:\Users\guilherme.honda\source\repos\Fullbar\FullbarDigital\FullbarDigital\obj\Debug\netcoreapp2.0\FullbarDigital.dll
 C:\Users\guilherme.honda\source\repos\Fullbar\FullbarDigital\FullbarDigital\obj\Debug\netcoreapp2.0\FullbarDigital.pdb
+C:\Users\guilherme.honda\source\repos\Fullbar\FullbarDigital\FullbarDigital\obj\Debug\netcoreapp2.0\FullbarDigital.csprojResolveAssemblyReference.cache

@@ -7,10 +7,21 @@
 
 <h2>Lista de Alunos</h2>
 
-<p>
-    <a asp-action="Create" class="btn btn-success">Novo</a>
-</p>
-<table class="table">
+<div class="row">
+    <div class="col-sm-3">
+            <a asp-action="Create" class="btn btn-success">Novo</a>
+    </div>
+    <div class="col-sm-3">
+        <input type="text" 
+               id="searchId" 
+               onkeyup="search()" 
+               placeholder="Pesquisar.." 
+               title="Digite o Nome, RA ou Curso"
+               class="form-control">
+    </div>
+</div>
+
+<table class="table" id="alunoTable">
     <thead>
         <tr>
             <th>Nome</th>
@@ -45,3 +56,31 @@
         }
     </tbody>
 </table>
+
+@section Scripts
+    {
+    <script type="text/javascript">
+        function search() {
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("searchId");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("alunoTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td1 = tr[i].getElementsByTagName("td")[0];
+                td2 = tr[i].getElementsByTagName("td")[1];
+                td3 = tr[i].getElementsByTagName("td")[2];
+                if (td1 || td2 || td3) {
+                    if (td1.innerHTML.toUpperCase().indexOf(filter) > -1
+                        || td2.innerHTML.toUpperCase().indexOf(filter) > -1
+                        || td3.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+
+}
