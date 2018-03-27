@@ -1,0 +1,37 @@
+﻿@model FullbarDigital.Models.TbAluno
+
+@{
+    ViewData["Title"] = "Apagar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Apagar</h2>
+
+<h3>Tem certeza que deseja apagar esse registro?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Nome</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>RA</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ra)
+        </dd>
+        <dt>Curso</dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdCursoNavigation.Curso)
+        </dd>
+        <dt>Periodo</dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdPeriodoNavigation.Periodo)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdAluno" />
+        <input type="submit" value="Apagar" class="btn btn-danger" /> |
+        <a asp-action="Index"  class="btn btn-default" >Voltar</a>
+    </form>
+</div>

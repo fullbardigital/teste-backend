@@ -1,0 +1,46 @@
+﻿@model FullbarDigital.Models.TbAluno
+
+@{
+    ViewData["Title"] = "Novo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Novo Aluno</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"> Nome</label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ra" class="control-label">RA</label>
+                <input asp-for="Ra" class="form-control" />
+                <span asp-validation-for="Ra" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdPeriodo" class="control-label">Periodo</label>
+                <select asp-for="IdPeriodo" class ="form-control" asp-items="ViewBag.IdPeriodo"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdCurso" class="control-label">Curso</label>
+                <select asp-for="IdCurso" class="form-control" asp-items="ViewBag.IdCurso"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-default">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

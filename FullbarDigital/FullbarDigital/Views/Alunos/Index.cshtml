@@ -1,0 +1,86 @@
+﻿@model IEnumerable<FullbarDigital.Models.TbAluno>
+
+@{
+    ViewData["Title"] = "Lista de Alunos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista de Alunos</h2>
+
+<div class="row">
+    <div class="col-sm-3">
+            <a asp-action="Create" class="btn btn-success">Novo</a>
+    </div>
+    <div class="col-sm-3">
+        <input type="text" 
+               id="searchId" 
+               onkeyup="search()" 
+               placeholder="Pesquisar.." 
+               title="Digite o Nome, RA ou Curso"
+               class="form-control">
+    </div>
+</div>
+
+<table class="table" id="alunoTable">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>RA</th>
+            <th>Curso</th>
+            <th>Periodo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ra)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdCursoNavigation.Curso)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdPeriodoNavigation.Periodo)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdAluno" class="btn btn-warning">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdAluno" class="btn btn-info">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdAluno" class="btn btn-danger">Apagar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts
+    {
+    <script type="text/javascript">
+        function search() {
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("searchId");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("alunoTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td1 = tr[i].getElementsByTagName("td")[0];
+                td2 = tr[i].getElementsByTagName("td")[1];
+                td3 = tr[i].getElementsByTagName("td")[2];
+                if (td1 || td2 || td3) {
+                    if (td1.innerHTML.toUpperCase().indexOf(filter) > -1
+                        || td2.innerHTML.toUpperCase().indexOf(filter) > -1
+                        || td3.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+
+}
