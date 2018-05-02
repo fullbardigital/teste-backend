@@ -1,0 +1,12 @@
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.Dominio\bin\Debug\netcoreapp2.0\FullBarDigital.Dominio.deps.json
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.Dominio\bin\Debug\netcoreapp2.0\FullBarDigital.Dominio.dll
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.Dominio\bin\Debug\netcoreapp2.0\FullBarDigital.Dominio.pdb
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.Dominio\bin\Debug\netcoreapp2.0\FullbarDigital.Crosscutting.dll
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.Dominio\bin\Debug\netcoreapp2.0\FullbarDigital.Crosscutting.pdb
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.Dominio\obj\Debug\netcoreapp2.0\FullBarDigital.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.Dominio\obj\Debug\netcoreapp2.0\FullBarDigital.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.Dominio\obj\Debug\netcoreapp2.0\FullBarDigital.Dominio.AssemblyInfoInputs.cache
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.Dominio\obj\Debug\netcoreapp2.0\FullBarDigital.Dominio.AssemblyInfo.cs
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.Dominio\obj\Debug\netcoreapp2.0\FullBarDigital.Dominio.csproj.CopyComplete
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.Dominio\obj\Debug\netcoreapp2.0\FullBarDigital.Dominio.dll
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.Dominio\obj\Debug\netcoreapp2.0\FullBarDigital.Dominio.pdb

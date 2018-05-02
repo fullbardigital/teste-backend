@@ -1,0 +1,135 @@
+﻿@model AlunoViewModel
+@{
+    Layout = Layouts.MasterPage;
+}
+
+@using (Html.BeginForm("Index", "Aluno", FormMethod.Post, new { }))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <div class="form-row">
+            <div class="col-lg-4">
+                @Html.LabelFor(a => a.Nome)
+                <div>
+                    @Html.TextBoxFor(a => a.Nome, new { @class = "form-control", @maxlength = 100 })
+                </div>
+            </div>
+            <div class="col-lg-3">
+                @Html.LabelFor(a => a.RA)
+                <div>
+                    @Html.TextBoxFor(a => a.RA, new { @class = "form-control", @maxlength = 20 })
+                </div>
+            </div>
+            <div class="col-lg-3">
+                @Html.LabelFor(a => a.CodigoDoCurso)
+                <div>
+                    @Html.DropDownListFor(a => a.CodigoDoCurso, Model.Cursos, "Selecione", new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div style="margin-top:30px">
+                    <button class="btn btn-primary"><i class="fa fa-search"></i> Filtrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <a href="@Url.Action("Aluno", "Aluno" )" class="btn btn-add-aluno btn-primary pull-right"><i class="fa fa-plus"></i> Adicionar Aluno</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="fa fa-table"></i> Lista de Alunos
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Cód.</th>
+                                <th>Nome</th>
+                                <th>RA</th>
+                                <th>Período</th>
+                                <th>Curso</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null && Model.Alunos.Count > 0)
+                            {
+                                foreach (var aluno in Model.Alunos)
+                                {
+                                    <tr>
+                                        <td>@Html.DisplayFor(a => aluno.Codigo)</td>
+                                        <td>@Html.DisplayFor(a => aluno.Nome)</td>
+                                        <td>@Html.DisplayFor(a => aluno.RA)</td>
+                                        <td>@Html.DisplayFor(a => aluno.NomeDoPeriodo)</td>
+                                        <td>@Html.DisplayFor(a => aluno.NomeDoCurso)</td>
+                                        <td class="acoes">
+                                            <a href="@Url.Action("Aluno", "Aluno" , new { id=aluno.Codigo })"><i class="fa fa-edit"></i></a>
+                                            <a onclick="confirmaExclusao(@aluno.Codigo)"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="6" style="text-align:center">Não há registros cadastrados</td>
+                                </tr>
+
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Styles{
+    <style>
+        .btn-add-aluno {
+            margin-bottom: 10px;
+        }
+
+        .acoes {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+}
+@section Scripts{
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        function confirmaExclusao(data) {
+            swal({
+                title: "Confirma a exclusão? ",
+                text: "",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            }).then((willDelete) => {
+                    if (willDelete) {
+
+                        $.ajax({
+                            type: "GET",
+                            url: "@Url.Action("Excluir", "Aluno")",
+                            data: { "id": data },
+                            success: function () {
+                                location.reload();
+                            }
+                        });
+                    }
+                });
+        }
+    </script>
+}
