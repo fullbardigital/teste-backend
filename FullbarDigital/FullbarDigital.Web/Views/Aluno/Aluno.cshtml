@@ -1,0 +1,72 @@
+﻿@model AlunoViewModel
+@{
+    Layout = Layouts.MasterPage;
+}
+@using (Html.BeginForm("Aluno", "Aluno", FormMethod.Post, new { }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(a => a.Codigo)
+    <div class="form-group">
+        <div class="form-row">
+            <div class="col-lg-6">
+                @Html.LabelFor(a => a.Nome)
+                <div>
+                    @Html.TextBoxFor(a => a.Nome, new { @class = "form-control", @maxlength = 100 })
+                    @Html.ValidationMessageFor(a => a.Nome)
+                </div>
+            </div>
+            <div class="col-lg-6">
+                @Html.LabelFor(a => a.RA)
+                <div>
+                    @Html.TextBoxFor(a => a.RA, new { @class = "form-control", @maxlength = 20 })
+                    @Html.ValidationMessageFor(a => a.RA)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="form-row">
+            <div class="col-lg-6">
+                @Html.LabelFor(a => a.CodigoDoPeriodo)
+                <div>
+                    @Html.DropDownListFor(a => a.CodigoDoPeriodo, Model.Periodos, "Selecione", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(a => a.CodigoDoPeriodo)
+                </div>
+            </div>
+            <div class="col-lg-6">
+                @Html.LabelFor(a => a.CodigoDoCurso)
+                <div>
+                    @Html.DropDownListFor(a => a.CodigoDoCurso, Model.Cursos, "Selecione", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(a => a.CodigoDoCurso)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group btn-border">
+        <div class="form-row row-btn">
+            <div class="col-lg-6">
+                <a href="@Url.Action("Index", "Aluno")" class="btn btn-primary btn-voltar pull-right"><i class="fa fa-arrow-left"></i> Voltar</a>
+            </div>
+            <div class="col-lg-6">
+                <button type="submit" class="btn btn-success pull-left"><i class="fa fa-save"></i> Salvar</button>
+            </div>
+        </div>
+    </div>
+}
+@section Styles{
+
+    <style>
+        .btn-voltar {
+            color: #fff !important;
+        }
+
+        .row-btn {
+            margin-top: 10px;
+        }
+
+        .btn-border {
+            border-top: 1px solid #7FFFD4;
+        }
+    </style>
+
+}

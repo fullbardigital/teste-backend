@@ -1,0 +1,9 @@
+C:\Users\thiag\Desktop\FullbarDigital\FullbarDigital.Crosscutting\bin\Debug\netcoreapp2.0\FullbarDigital.Crosscutting.deps.json
+C:\Users\thiag\Desktop\FullbarDigital\FullbarDigital.Crosscutting\bin\Debug\netcoreapp2.0\FullbarDigital.Crosscutting.dll
+C:\Users\thiag\Desktop\FullbarDigital\FullbarDigital.Crosscutting\obj\Debug\netcoreapp2.0\FullbarDigital.Crosscutting.csprojResolveAssemblyReference.cache
+C:\Users\thiag\Desktop\FullbarDigital\FullbarDigital.Crosscutting\obj\Debug\netcoreapp2.0\FullbarDigital.Crosscutting.csproj.CoreCompileInputs.cache
+C:\Users\thiag\Desktop\FullbarDigital\FullbarDigital.Crosscutting\obj\Debug\netcoreapp2.0\FullbarDigital.Crosscutting.AssemblyInfoInputs.cache
+C:\Users\thiag\Desktop\FullbarDigital\FullbarDigital.Crosscutting\obj\Debug\netcoreapp2.0\FullbarDigital.Crosscutting.AssemblyInfo.cs
+C:\Users\thiag\Desktop\FullbarDigital\FullbarDigital.Crosscutting\bin\Debug\netcoreapp2.0\FullbarDigital.Crosscutting.pdb
+C:\Users\thiag\Desktop\FullbarDigital\FullbarDigital.Crosscutting\obj\Debug\netcoreapp2.0\FullbarDigital.Crosscutting.dll
+C:\Users\thiag\Desktop\FullbarDigital\FullbarDigital.Crosscutting\obj\Debug\netcoreapp2.0\FullbarDigital.Crosscutting.pdb

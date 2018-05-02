@@ -1,0 +1,16 @@
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.IoC\bin\Debug\netcoreapp2.0\FullBarDigital.IoC.deps.json
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.IoC\bin\Debug\netcoreapp2.0\FullBarDigital.IoC.dll
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.IoC\obj\Debug\netcoreapp2.0\FullBarDigital.IoC.csprojResolveAssemblyReference.cache
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.IoC\obj\Debug\netcoreapp2.0\FullBarDigital.IoC.csproj.CoreCompileInputs.cache
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.IoC\obj\Debug\netcoreapp2.0\FullBarDigital.IoC.AssemblyInfoInputs.cache
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.IoC\obj\Debug\netcoreapp2.0\FullBarDigital.IoC.AssemblyInfo.cs
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.IoC\bin\Debug\netcoreapp2.0\FullBarDigital.IoC.pdb
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.IoC\bin\Debug\netcoreapp2.0\FullbarDigital.Crosscutting.dll
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.IoC\bin\Debug\netcoreapp2.0\FullBarDigital.Dominio.dll
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.IoC\bin\Debug\netcoreapp2.0\FullBarDigital.Infraestrutura.dll
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.IoC\bin\Debug\netcoreapp2.0\FullBarDigital.Infraestrutura.pdb
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.IoC\bin\Debug\netcoreapp2.0\FullbarDigital.Crosscutting.pdb
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.IoC\bin\Debug\netcoreapp2.0\FullBarDigital.Dominio.pdb
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.IoC\obj\Debug\netcoreapp2.0\FullBarDigital.IoC.csproj.CopyComplete
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.IoC\obj\Debug\netcoreapp2.0\FullBarDigital.IoC.dll
+C:\Users\thiag\Desktop\FullbarDigital\FullBarDigital.IoC\obj\Debug\netcoreapp2.0\FullBarDigital.IoC.pdb
