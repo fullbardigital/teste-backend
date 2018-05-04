@@ -1,0 +1,58 @@
+﻿@model TesteFullBar.Models.Aluno
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Aluno</h4>
+<hr />
+@using (Html.BeginForm("Edit", "Aluno", FormMethod.Post, new { @id = "FAlunos_Ins" }))
+{
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id" />
+            <div class="col-md-12">
+                <div class="form-group col-md-4">
+                    <label asp-for="Nome" class="control-label"></label>
+                    @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control"} })
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label asp-for="RA" class="control-label"></label>
+                    @Html.EditorFor(model => model.RA, new { htmlAttributes = new { @class = "form-control" } })
+                    <span asp-validation-for="RA" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group col-md-4">
+                    <label asp-for="idPeriodo" class="control-label"></label>
+                    @Html.DropDownListFor(model => model.idPeriodo, (SelectList)ViewBag.DropDownPeriodos, new { @class = "form-control"})
+                </div>
+                <div class="form-group col-md-4">
+                    <label asp-for="idCurso" class="control-label"></label>
+                    @Html.DropDownListFor(model => model.idCurso, (SelectList)ViewBag.DropDownCursos, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Enviar" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+

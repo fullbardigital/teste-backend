@@ -1,0 +1,11 @@
+C:\Users\Magazine Luiza\source\repos\TesteFullBar\TesteFullBar\bin\Debug\netcoreapp2.0\TesteFullBar.deps.json
+C:\Users\Magazine Luiza\source\repos\TesteFullBar\TesteFullBar\bin\Debug\netcoreapp2.0\TesteFullBar.runtimeconfig.json
+C:\Users\Magazine Luiza\source\repos\TesteFullBar\TesteFullBar\bin\Debug\netcoreapp2.0\TesteFullBar.runtimeconfig.dev.json
+C:\Users\Magazine Luiza\source\repos\TesteFullBar\TesteFullBar\bin\Debug\netcoreapp2.0\TesteFullBar.dll
+C:\Users\Magazine Luiza\source\repos\TesteFullBar\TesteFullBar\bin\Debug\netcoreapp2.0\TesteFullBar.pdb
+C:\Users\Magazine Luiza\source\repos\TesteFullBar\TesteFullBar\obj\Debug\netcoreapp2.0\TesteFullBar.csprojResolveAssemblyReference.cache
+C:\Users\Magazine Luiza\source\repos\TesteFullBar\TesteFullBar\obj\Debug\netcoreapp2.0\TesteFullBar.csproj.CoreCompileInputs.cache
+C:\Users\Magazine Luiza\source\repos\TesteFullBar\TesteFullBar\obj\Debug\netcoreapp2.0\TesteFullBar.AssemblyInfoInputs.cache
+C:\Users\Magazine Luiza\source\repos\TesteFullBar\TesteFullBar\obj\Debug\netcoreapp2.0\TesteFullBar.AssemblyInfo.cs
+C:\Users\Magazine Luiza\source\repos\TesteFullBar\TesteFullBar\obj\Debug\netcoreapp2.0\TesteFullBar.dll
+C:\Users\Magazine Luiza\source\repos\TesteFullBar\TesteFullBar\obj\Debug\netcoreapp2.0\TesteFullBar.pdb

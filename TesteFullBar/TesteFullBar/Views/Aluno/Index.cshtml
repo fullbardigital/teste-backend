@@ -1,0 +1,84 @@
+﻿@model TesteFullBar.Models.Aluno
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Alunos</h2>
+
+@using (Html.BeginForm("Index", "Aluno", FormMethod.Post, new { @id = "FAlunos" }))
+{
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="col-md-3 form-group">
+                <div class="form-group form-md-line-input has-info">
+                    @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control", @id = "Nome" } })
+                    <label for="form_control_1">Nome</label>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <div class="form-group form-md-line-input has-info">
+                    @Html.EditorFor(model => model.RA, new { htmlAttributes = new { @class = "form-control", @id = "RA" } })
+                    <label for="form_control_1">RA</label>
+                </div>
+            </div>
+            <div class=" col-md-3">
+                <div class="form-group form-md-line-input has-info">
+                    @Html.DropDownListFor(model => model.idCurso, (SelectList)ViewBag.DropDownCursos, new { @class = "form-control", @id = "idCurso" })
+                    <label for="form_control">Curso</label>
+                </div>
+            </div>
+            <div class="col-md-3 form-group" align="right">
+                <button id="btnBuscar" type="submit" class="btn-lg">
+                    Buscar
+                </button>
+                <button id="btnNovo" type="button" class="btn-lg">
+                    Novo
+                </button>
+            </div>
+        </div>
+    </div>
+}
+<div class="row">
+    <div class="col-md-12">
+        <table class="table" id="tbAlunos">
+            <thead>
+                <tr>
+                    <th>Curso</th>
+                    <th>Período</th>
+                    <th>Aluno</th>
+                    <th>RA</th>
+                    <th>Data_Cadastro</th>
+                    <th>Data_Alteracao</th>
+                    <th></th>
+                    <th></th>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Alunos)
+                {
+                    <tr>
+                        <td>@item.Periodo.nmPeriodo</td>
+                        <td>@item.Curso.nmCurso</td>
+                        <td>@item.Nome</td>
+                        <td>@item.RA</td>
+                        <td>@Html.ActionLink("Editar", "Edit", new { id = item.id })</td>
+                        <td>@Html.ActionLink("Excluir", "Delete", new { id = item.id })</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<script>
+
+    $('#btnNovo').click(function () {
+        window.location.href = "/Aluno/Create";
+    });
+
+
+</script>
