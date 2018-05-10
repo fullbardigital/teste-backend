@@ -1,0 +1,117 @@
+﻿@{
+    ViewData["Title"] = "Pesquisar Alunos";
+    ViewData["Page"] = "Index";
+
+}
+@model AlunoViewModel
+
+<div class="panel">
+    <div class="panel-heading">
+        <h3 class="panel-title">Pesquisar Alunos</h3>
+    </div>
+
+    <!-- Striped Table -->
+    <!--===================================================-->
+    <div class="panel-body">
+        @using (var form = Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div class="row">
+                <div class="col-sm-6 table-toolbar-left">
+                    <a href="@Url.Action("Create", "Home")" id="demo-btn-addrow" class="btn btn-purple">Novo</a>
+                    <button type="submit" id="demo-btn-addrow" class="btn btn-purple"> Pesquisar</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 table-toolbar-left">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group col-md-12">
+                                <label>Nome</label>
+                                @Html.TextBoxFor(x => x.Aluno.Nome, new { @class = "form-control", placeholder = "ex: João da Silva", maxlength = "100" })
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group col-md-12">
+                                <label>RA</label>
+                                @Html.TextBoxFor(x => x.Aluno.RA, new { @class = "form-control", placeholder = "ex: 12345", maxlength = "20" })
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group col-md-12">
+                                <label>Cursos</label>
+                                @Html.DropDownListFor(x => x.Aluno.idCurso, Model.Cursos, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="row">
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <td>#</td>
+                            <td>RA</td>
+                            <td>Nome</td>
+                            <td>Período</td>
+                            <td>Curso</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Alunos)
+                        {
+                            <tr>
+                                <td>@item.idAluno</td>
+                                <td>@item.RA</td>
+                                <td>@item.Nome</td>
+                                <td>@item.Periodo.Periodo</td>
+                                <td>@item.Curso.Curso</td>
+                                <td class="footable-visible footable-first-column text-right">
+
+                                    <a href="@Url.Action("Edit","Home", new { Id = item.idAluno })" class="btn btn-success btn-xs"><i class="demo-psi-pen-5"></i></a>
+
+                                    <a data-toggle="modal" data-target="@("#Modal" + item.idAluno)">
+                                        <button class="demo-delete-row btn btn-danger btn-xs"><i class="demo-pli-cross"></i></button>
+                                    </a>
+                                    <!-- Modal Small-->
+                                    <div id="@("Modal" + item.idAluno)" tabindex="-1" role="dialog" aria-labelledby="myModalLabelSmall" aria-hidden="true" class="modal fade">
+                                        <div class="modal-dialog modal-sm">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <h4 id="myModalLabelSmall" class="modal-title">Excluir Produto</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Deseja excluir esse Registro? <br />
+                                                    <ul>
+                                                        <li>RA: <strong>@item.RA</strong></li>
+                                                        <li>Nome: <strong>@item.Nome</strong></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" data-dismiss="modal" class="btn btn-default">Cancelar</button>
+                                                    <a type="button" class="btn btn-danger" href="@Url.Action("Delete", "Home", new { Id = item.idAluno })">Excluir</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--Bootbox Modals [ OPTIONAL ]-->
+<script src="plugins/bootbox/bootbox.min.js"></script>

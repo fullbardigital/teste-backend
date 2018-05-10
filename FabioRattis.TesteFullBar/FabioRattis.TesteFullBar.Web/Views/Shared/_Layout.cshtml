@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewData["Title"] - FabioRattis.TesteFullBar.Web</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/nifty.min.css" rel="stylesheet">
+    <link href="~/css/demo/nifty-demo-icons.min.css" rel="stylesheet">
+    <link href="~/plugins/pace/pace.min.css" rel="stylesheet">
+    <script src="~/plugins/pace/pace.min.js"></script>
+    <link href="~/css/demo/nifty-demo.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="container" class="effect aside-float aside-bright mainnav-lg">
+
+        <header id="navbar">
+            <div id="navbar-container" class="boxed">
+                <!--Brand logo & name-->
+                <!--================================-->
+                <div class="navbar-header">
+                    <div class="navbar-brand">
+                        <img src="~/img/logo.png" alt="Nifty Logo" class="brand-icon">
+                        <div class="brand-title">
+                            <span class="brand-text">Fabio Rattis</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="navbar-content">
+                    <ul class="nav navbar-top-links">
+                        <li class="tgl-menu-btn pull-left navbar-left" style="    position: absolute;">
+                            <a class="mainnav-toggle" href="#">
+                                <i class="demo-pli-list-view"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="boxed">
+            <div id="content-container">
+                <div id="page-head">
+                    <div id="page-title">
+                        <h1 class="page-header text-overflow">@ViewData["Title"]</h1>
+                    </div>
+                    <ol class="breadcrumb">
+                        <li><i class="demo-pli-home"></i></li>
+                        <li>Home</li>
+                        <li class="active">@ViewData["Page"]</li>
+                    </ol>
+                </div>
+                <div id="page-content">
+                    <hr class="new-section-sm bord-no">
+                    <div class="row">
+                        <div class="col-lg-10 col-lg-offset-1">
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav id="mainnav-container">
+                <div id="mainnav">
+
+                    <!--OPTIONAL : ADD YOUR LOGO TO THE NAVIGATION-->
+                    <!--It will only appear on small screen devices.-->
+                    <!--================================
+                    <div class="mainnav-brand">
+                        <a href="~/index.html" class="brand">
+                            <img src="~/img/logo.png" alt="Nifty Logo" class="brand-icon">
+                            <span class="brand-text">Nifty</span>
+                        </a>
+                        <a href="~/#" class="mainnav-toggle"><i class="pci-cross pci-circle icon-lg"></i></a>
+                    </div>-->
+                    <div id="mainnav-menu-wrap">
+                        <div class="nano">
+                            <div class="nano-content">
+                                <div id="mainnav-profile" class="mainnav-profile">
+                                    <div class="profile-wrap text-center">
+                                        <div class="pad-btm">
+                                            <img class="img-circle img-md" src="~/img/profile-photos/1.png" alt="Profile Picture">
+                                        </div>
+                                        <p href="#profile-nav" class="box-block" data-toggle="collapse" aria-expanded="false">
+                                        <p class="mnp-name">Admin</p>
+                                        <span class="mnp-desc">admin@demo.net</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <ul id="mainnav-menu" class="list-group">
+                                    <li class="list-header">Menu</li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="demo-pli-home"></i>
+                                            <span class="menu-title">Home</span>
+                                            <i class="arrow"></i>
+                                        </a>
+                                        <ul class="collapse">
+                                            <li><a href="@Url.Action("Index","Home")">Pesquisar Alunos</a></li>
+                                            <li><a href="@Url.Action("Create","Home")">Criar Aluno</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <footer id="footer">
+            <div class="hide-fixed pull-right pad-rgt">
+                Data Inicio Teste: <strong>2018-05-07</strong>
+            </div>
+            <p class="pad-lft">&#0169; @DateTime.Now.Year Rattis Dev.</p>
+        </footer>
+        <button class="scroll-top btn">
+            <i class="pci-chevron chevron-up"></i>
+        </button>
+    </div>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/nifty.min.js"></script>
+    <script src="plugins/bootbox/bootbox.min.js"></script>
+
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+

@@ -1,0 +1,8 @@
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Model\bin\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Model.deps.json
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Model\bin\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Model.dll
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Model\bin\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Model.pdb
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Model\obj\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Model.csproj.CoreCompileInputs.cache
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Model\obj\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Model.AssemblyInfoInputs.cache
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Model\obj\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Model.AssemblyInfo.cs
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Model\obj\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Model.dll
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Model\obj\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Model.pdb
