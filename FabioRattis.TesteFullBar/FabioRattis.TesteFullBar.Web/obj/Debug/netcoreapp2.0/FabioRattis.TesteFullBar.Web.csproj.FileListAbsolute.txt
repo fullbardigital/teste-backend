@@ -1,0 +1,16 @@
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Web\bin\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Web.deps.json
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Web\bin\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Web.runtimeconfig.json
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Web\bin\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Web.runtimeconfig.dev.json
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Web\bin\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Web.dll
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Web\bin\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Web.pdb
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Web\bin\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.DataAccess.dll
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Web\bin\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Model.dll
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Web\bin\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.DataAccess.pdb
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Web\bin\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Model.pdb
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Web\obj\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Web.csprojResolveAssemblyReference.cache
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Web\obj\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Web.csproj.CoreCompileInputs.cache
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Web\obj\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Web.AssemblyInfoInputs.cache
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Web\obj\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Web.AssemblyInfo.cs
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Web\obj\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Web.csproj.CopyComplete
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Web\obj\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Web.dll
+C:\Users\fabio.lima\Project\FabioRattis.TesteFullBar\FabioRattis.TesteFullBar.Web\obj\Debug\netcoreapp2.0\FabioRattis.TesteFullBar.Web.pdb
