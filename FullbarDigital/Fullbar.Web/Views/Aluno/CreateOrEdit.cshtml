@@ -1,0 +1,41 @@
+﻿@model Fullbar.Entities.TbAluno
+@{
+    ViewData["Title"] = "CreateOrEdit";
+}
+
+<br />
+<div class="form-group">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.IdAluno)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nome)
+            @Html.EditorFor(model => model.Nome)
+            @Html.ValidationMessageFor(model => model.Nome)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Ra, "RA")
+            @Html.EditorFor(model => model.Ra)
+            @Html.ValidationMessageFor(model => model.Ra)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IdCurso, "Curso")
+            @Html.DropDownListFor(model => model.IdCurso, ViewBag.Cursos as SelectList)
+            @Html.ValidationMessageFor(model => model.IdCurso)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IdPeriodo, "Período")
+            @Html.DropDownListFor(model => model.IdPeriodo, ViewBag.Periodos as SelectList)
+            @Html.ValidationMessageFor(model => model.IdPeriodo)
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Salvar" class="btn button" />
+        </div>
+    }
+</div>
+

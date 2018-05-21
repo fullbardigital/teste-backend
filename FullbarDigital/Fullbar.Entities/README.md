@@ -1,0 +1,2 @@
+Contexto e entidades foram criadas utilizando a abordagem DatabaseFirst atavés do comando: 
+Scaffold-DbContext "Data Source=sqlserver.c7ophga59fwr.us-east-1.rds.amazonaws.com;Database=DB_TESTE;User ID=user_candidato;Password=123@456;MultipleActiveResultSets=True;" Microsoft.EntityFrameworkCore.SqlServer -v

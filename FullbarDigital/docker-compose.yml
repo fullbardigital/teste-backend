@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  fullbar.api:
+    image: ${DOCKER_REGISTRY}fullbarapi
+    build:
+      context: .
+      dockerfile: Fullbar.API/Dockerfile
+
+  fullbar.web:
+    image: ${DOCKER_REGISTRY}fullbarweb
+    build:
+      context: .
+      dockerfile: Fullbar.Web/Dockerfile
+
