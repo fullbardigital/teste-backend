@@ -1,0 +1,42 @@
+﻿@model TbAluno;
+@{
+    ViewData["Title"] = "Novo Aluno";
+}
+<div>
+    <a asp-action="Index" class="btn btn-default">Voltar</a>
+</div>
+<hr />
+<div class="title">
+    <h2> Registro de Alunos</h2>
+</div>
+<div class="col-md-12">
+    <form asp-action="Create" class="col-md-3">
+        <div>            
+            <div class="form-group">
+                <label asp-for="Nome">Nome</label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ra">RA</label>
+                <input asp-for="Ra" class="form-control" />
+                <span asp-validation-for="Ra" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdCurso">Curso</label>
+                <select asp-for="IdCurso" class="form-control" asp-items="ViewBag.Cursos"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdPeriodo">Período</label>
+                <select asp-for="IdPeriodo" class="form-control" asp-items="ViewBag.Periodos"></select>
+            </div>
+        </div>
+        <div>
+            <input class="btn btn-primary" type="submit" value="Cadastrar" />
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

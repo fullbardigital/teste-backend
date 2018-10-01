@@ -1,0 +1,63 @@
+﻿@model IEnumerable<TbAluno>;
+@{
+    ViewData["Title"] = "Alunos";
+}
+<div>
+    <div class="row">
+        <div class="col-sm-10">
+            <input id="search" class="form-control" onkeyup="search()" type="text" placeholder="Filtro">
+        </div>
+        <div class="col-sm-2">
+            <input class="btn btn-primary" type="button" value="Adicionar aluno" onclick="location.href='@Url.Action("Create", "Alunos")'" />
+        </div>
+    </div>
+    <table id="table-alunos" class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>RA</th>
+                <th>Curso</th>
+                <th>Periodo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var aluno in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => aluno.Nome)</td>
+                    <td>@Html.DisplayFor(modelItem => aluno.Ra)</td>
+                    <td>@Html.DisplayFor(modelItem => aluno.IdCursoNavigation.Curso)</td>
+                    <td>@Html.DisplayFor(modelItem => aluno.IdPeriodoNavigation.Periodo)</td>
+                    <td>
+                        <button class="btn glyphicon glyphicon-pencil" type="button" onclick="location.href='@Url.Action("Edit", "Alunos", new { id = aluno.IdAluno})'"></button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function search() {
+        var filter = document.getElementById("search").value.toUpperCase();
+        var table = document.getElementById("table-alunos");
+        var pegarLinha = function (tr) {
+            var obj = {
+                nome: tr.getElementsByTagName("td")[0].innerHTML.toUpperCase(),
+                ra: tr.getElementsByTagName("td")[1].innerHTML.toUpperCase(),
+                curso: tr.getElementsByTagName("td")[2].innerHTML.toUpperCase()
+            };
+            return obj;
+        }
+
+        var tr = table.getElementsByTagName("tr");        
+        for (var i = 1; i < tr.length; i++) {
+            var linha = pegarLinha(tr[i]);
+            if (linha.nome.indexOf(filter) != -1 || linha.ra.indexOf(filter) != -1 || linha.curso.indexOf(filter) != -1)
+                tr[i].style.display = "";
+            else
+                tr[i].style.display = "none";
+        }
+    }
+</script>
