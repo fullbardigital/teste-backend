@@ -1,0 +1,29 @@
+﻿@model FullbarDigital.TESTE.Models.AlunoViewModel
+
+@{
+    ViewData["Title"] = "Excluir aluno";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Excluir aluno</h2>
+
+<h3>Tem certeza que deseja excluir esse aluno?</h3>
+<div class="container-fluid">
+    <hr />
+
+    <div class="container">
+        <p><b>@Html.DisplayNameFor(model => model.Nome):</b> @Html.DisplayFor(model => model.Nome)</p>
+        <p><b>@Html.DisplayNameFor(model => model.Ra):</b>  @Html.DisplayFor(model => model.Ra)</p>
+        <p><b>@Html.DisplayNameFor(model => model.IdCurso):</b> @Html.DisplayFor(model => model.IdCursoNavigation.Curso)</p>
+        <p><b>@Html.DisplayNameFor(model => model.IdPeriodo):</b> @Html.DisplayFor(model => model.IdPeriodoNavigation.Periodo)</p>
+    </div>
+</div>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="IdAluno" />
+    <div class="form-group text-right">
+        <input type="submit" value="Excluir" class="btn btn-default" />
+        <input type="button" value="Voltar" class="btn btn-default" onclick="location.href='@Url.Action("Index")'" />
+    </div>
+</form>
+</div>

@@ -1,0 +1,84 @@
+﻿@model IEnumerable<FullbarDigital.TESTE.Models.AlunoViewModel>
+
+@{
+    ViewData["Title"] = "Listar alunos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista de alunos</h2>
+<hr />
+
+<div class="container-fluid">
+    <div class="row">
+        <form asp-action="Index">
+            <div class="col-md-3">
+                <label class="control-label">Nome</label>
+                <input type="text" name="nome" class="form-control" id="NomeFiltro" />
+            </div>
+            <div class="col-md-3">
+                <label class="control-label">RA</label>
+                <input type="text" name="ra" class="form-control" id="RAFiltro" />
+            </div>
+            <div class="col-md-3">
+                <label class="control-label">Curso</label>
+                <select id="CursoFiltro" name="idCurso" class="form-control" asp-items="ViewBag.Curso"></select>
+            </div>
+            <div class="col-md-3 form-group text-right">
+                <br />
+                <input type="submit" class="btn btn-default" value="Filtrar" />
+                <input type="button" class="btn btn-default" value="Limpar Filtros" onclick="location.href='@Url.Action("Index")'" />
+            </div>
+        </form>
+    </div>
+    <br />
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Ra)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.IdCurso)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.IdPeriodo)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ra)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IdCursoNavigation.Curso)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IdPeriodoNavigation.Periodo)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.IdAluno">Editar</a> |
+                            <a asp-action="Delete" asp-route-id="@item.IdAluno">Excluir</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <div class="form-group text-right">
+            <input type="button" class="btn btn-default" value="Cadastrar novo aluno" onclick="location.href='@Url.Action("Create")'" />
+        </div>
+    </div>
+
+</div>
