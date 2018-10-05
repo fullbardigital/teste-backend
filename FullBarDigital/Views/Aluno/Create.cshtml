@@ -1,0 +1,51 @@
+﻿@model FullbarDigital.TESTE.Models.AlunoViewModel
+
+@{
+    ViewData["Title"] = "Novo aluno";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Criar novo aluno</h2>
+
+<hr />
+<form asp-action="Create">
+    <div class="row">
+        <div class="col-md-4">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ra" class="control-label"></label>
+                <input asp-for="Ra" class="form-control" />
+                <span asp-validation-for="Ra" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdPeriodo" class="control-label"></label>
+                <select asp-for="IdPeriodo" class="form-control" asp-items="ViewBag.Periodo"></select>
+                <span asp-validation-for="IdPeriodo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdCurso" class="control-label"></label>
+                <select asp-for="IdCurso" class="form-control" asp-items="ViewBag.Curso"></select>
+                <span asp-validation-for="IdCurso" class="text-danger"></span>
+            </div>            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group text-right">
+                <input type="submit" value="Cadastrar" class="btn btn-default" />
+                <input type="button" value="Voltar" class="btn btn-default" onclick="location.href='@Url.Action("Index")'" />
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
